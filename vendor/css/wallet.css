@@ -1,0 +1,121 @@
+* {
+	font-family: 'Ubuntu Mono', monospace;
+}
+
+body {
+	background-color: lightgray;
+	margin: 10px;
+	cursor: pointer;
+}
+
+#tooltip {
+	display: inline-block;
+	position: absolute;
+	top: 10px;
+	right: 21px;
+	margin: 0;
+	background-color: lightgray;
+	opacity: .5;
+	padding-left: 10px;
+	padding-right: 10px;
+	;
+}
+
+#wallet {
+	background-image: linear-gradient(to left, #3bb9ea, #00bde1, #00c0d4, #00c1c2, #00c2ae);
+}
+
+#wrap div {
+	float: left;
+}
+
+#qr {
+	display: block;
+	width: 150px;
+	margin-left: 12.5px;
+	margin-top: 12.5px;
+}
+
+.side {
+	width: 70px;
+	height: 326px;
+}
+
+.side h1 {
+	-webkit-transform: rotate(270deg);
+	width: 326px;
+	position: absolute;
+	left: -117px;
+	top: 58px;
+	letter-spacing: 2px;
+	color: white;
+}
+
+.side img {
+	width: 50px;
+	transform: rotate(270deg);
+	margin-top: 78px;
+	margin-left: 13px;
+}
+
+.side h5 {
+	color: white;
+	transform: rotate(270deg);
+	font-size: 32px;
+	letter-spacing: 2px;
+	margin-top: 62px;
+}
+
+#left {
+	width: 175px;
+	height: 175px;
+	background-color: white;
+	margin: 58px;
+	border-radius: 5px;
+}
+
+#left h2 {
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+	background-color: transparent;
+	margin-top: 20px;
+	color: white;
+}
+
+#right {
+	width: 631px;
+	background-color: transparent;
+}
+
+#top {
+	width: 100%;
+	height: 149px;
+	padding-top: 51px;
+}
+
+#box {
+	width: 88%;
+	height: 90px;
+	background-color: rgba(255, 255, 255, 1);
+	margin-top: 10px;
+	border-radius: 5px;
+}
+
+#bottom {
+	width: 100%;
+	height: 65px;
+	margin-top: 7px;
+}
+
+#top h2,
+#bottom h2 {
+	padding-top: 5px;
+	margin: 0px;
+	color: white;
+}
+
+#privateKey {
+	margin-top: 9px !important;
+	font-size: 17px;
+}

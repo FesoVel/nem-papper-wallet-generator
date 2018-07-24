@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+    <meta name="description" content="A browser based NEM papper wallet generator built on JavaScript. Generate your NEM papper wallet.">
+    <meta name="keywords" content="NEM, XEM, New Economy Movement, Blockchain, Cryptocurrency, Papper Wallet, NEM Papper Wallet, NEM Papper Wallet Generator, NEM Cold Wallet, NEM Cold Storage Wallet, NEM Cold Papper Wallet, NEM Community Project">
+    <meta name="author" content="Viktor Veljanovski">
+    <title>NEM Offline Wallet</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="vendor/img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="vendor/img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="vendor/img/favicons/favicon-16x16.png">
+    <link rel="manifest" href="vendor/img/favicons/site.webmanifest">
+    <link rel="mask-icon" href="vendor/img/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/solid.css" integrity="sha384-TbilV5Lbhlwdyc4RuIV/JhD8NR+BfMrvz4BL5QFa2we1hQu6wvREr3v6XSRfCTRp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/fontawesome.css" integrity="sha384-ozJwkrqb90Oa3ZNb+yKFW2lToAWYdTiF1vt8JiH5ptTGHTGcN7qdoR1F95e0kYyG" crossorigin="anonymous">
+    <script src="dist/nem-sdk.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 title">
+          <div class="square">
+            <h3>NEM OFFLINE WALLET</h3>
+            <img src="vendor/img/nem_logo_small.png">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row block">
+        <div class="col-md-12">
+          <h4>What is NEM?</h4>
+          <p>NEM (New Economy Movement) is the world’s first “Smart Asset” blockchain launched on March 31, 2015. This blockchain project is designed to be functional and easy to use in today's economy. If you want to learn more about NEM, check out all the relevant links below to get you started.</p>
+          <ul id="links-list">
+            <li><span>Official Site</span> - <a href="https://nem.io">NEM.io</a></li>
+            <li><span>Blog</span> - <a href="https://blog.nem.io/">Official Blog of NEM/XEM</a></li>
+            <li><span>Forum</span> - <a href="https://forum.nem.io/">Official NEM Forum</a></li>
+            <li><span>Twitter</span> - <a href="https://twitter.com/nemofficial">@NEMofficial</a></li>
+            <li><span>Facebook</span> - <a href="https://www.facebook.com/ourNEM">facebook.com/ourNEM</a></li>
+            <li><span>LinkedIn</span> - <a href="https://www.linkedin.com/company/nem-io-foundation/">NEM.io Foundation</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row block">
+        <div class="col-md-12">
+          <h4>How does this work?</h4>
+          <p>This is a browser based NEM papper wallet generator built on JavaScript. All of the code runs on your browser. It generates a new NEM wallet that you can use to transfer funds to. To generate new keys and addresses it uses the functionality of the <a href="https://github.com/QuantumMechanics/NEM-sdk">NEM SDK</a>. It does not store any wallet informationa and nothing ever leaves your browser. This is an open source project and is hosted on GitHub.</p>
+        </div>
+      </div>
+      <div class="row block">
+        <div class="col-md-12">
+          <h4>Safety tips</h4>
+          <p>Before using this wallet generator please make sure to disable your browser extensions. You can turn off your internet connection before using the generator, it will work eather way.</p>
+          <p>For maximum safety download the code from GitHub and run it on your local computer that is not connected to the internet.</p>
+          <p>If you are more trusting, you should still think about running the generator from an incognito window.</p>
+          <p>Remember that ANYONE who has access to your private key can spend your XEM. Keep your wallet SAFE!</p>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div id="generate-block" class="row block">
+        <div class="col-md-12 btn-wrap">
+          <button type="button" class="square btn btn-default generate" data-toggle="modal" data-target="#generateModal">Generate Wallet</button>
+        </div>
+      </div>
+      <div class="modal fade" id="generateModal" tabindex="-1" role="dialog" aria-labelledby="generateModalTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">For Your Safety</h5>
+            </div>
+            <div class="modal-body">
+              <p>Please make sure you are using a safe browser and you understand that the private key and the addres will be revealed on your screen before you proceed. Keep your wallet safe!</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" id="btnPrint" class="btn btn-primary hidden" data-dismiss="modal" onclick="generateWallet();">Generate</button>
+              <h4 id="counter">5</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section id="footer">
+      <div class="container">
+        <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
+          <p>Built By Viktor Veljanovski</p>
+          <p><a href="https://twitter.com/theVikVel" target="_blank"> Twitter</a> | <a href="https://www.linkedin.com/in/viktorveljanovski/" target="_blank">LinkedIn</a></p>
+        </div>
+        <p id="donate" data-toggle="modal" data-target="#donateModal">Donations are GREATLY appreciated!</p>
+      </div>
+    </section>
+    <div class="modal fade" id="donateModal" tabindex="-1" role="dialog" aria-labelledby="donateModalTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Donate NEM</h5>
+          </div>
+          <div class="modal-body">
+            <img src="vendor/img/nem_donation_address.png">
+            <p>NAVJPJDPN2GVJ6Y7F2PPTKHH4LTH5HF566HVD34S</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="vendor/jquery/jquery.min.js"></script> 
+    <script src="dist/generate.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script> 
+  </body>
+</html>
