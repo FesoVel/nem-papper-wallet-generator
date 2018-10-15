@@ -13,7 +13,7 @@ body {
 }
 
 a {
-  color: #f5a300;
+  color: #f80;
 }
 
 a:hover {
@@ -156,27 +156,24 @@ p {
 
 #counter {
   margin: 0px;
-  color: #f5a300;
+  color: #f80;
 }
 
 #footer p {
   text-align: center;
   color: white;
-  font-weight: bold;
-}
-
-#footer a {
-  font-weight: bold;
 }
 
 #footer a:hover {
-  color: #f5a300;
+  color: #f80;
   text-decoration: none;
 }
 
 #donate {
   cursor: pointer;
-  color: #f5a300 !important;
+  color: #f80 !important;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 #donateModal .modal-title {
@@ -194,6 +191,15 @@ p {
 #donateModal p {
   text-align: center;
   font-size: 19px;
+}
+
+.github-fork-ribbon{
+  position: fixed !important;
+}
+
+.github-fork-ribbon:before{
+  position: fixed !important;
+  background-color: #f80 !important;
 }
 
 @media (min-width: 992px) {
