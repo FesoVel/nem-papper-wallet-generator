@@ -1,6 +1,8 @@
 # NEM Papper Wallet Generator
 A JavaScript NEM wallet generator built with [NEM Developer Kit for Node.js and the browser]( https://github.com/QuantumMechanics/NEM-sdk).
 
+[__LIVE VERSION__](https://fesovel.github.io/nem-papper-wallet-generator/)
+
 ## How to install on your computer
 
 Just download the .zip file anywhere on your computer and open index.html with a browser. This will work even if you don't have a connection to the internet.
