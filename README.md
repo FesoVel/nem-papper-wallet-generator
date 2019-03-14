@@ -1,5 +1,5 @@
 # NEM Papper Wallet Generator
-A JavaScript NEM wallet generator using the NEM JavaScript SDK.
+A JavaScript NEM wallet generator built with [NEM Developer Kit for Node.js and the browser]( https://github.com/QuantumMechanics/NEM-sdk).
 
 ## How to install on your computer
 
